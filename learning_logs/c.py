@@ -1,0 +1,2 @@
+text = "   ggg."
+print(text)

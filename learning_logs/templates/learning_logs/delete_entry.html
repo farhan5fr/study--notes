@@ -1,0 +1,12 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+ <form action="{% url 'learning_logs:delete_entry' entry.id %}" method="post">
+   {% csrf_token %}
+   <p>Do you want to delete the selected content of the topic- {{ topic }}?</p>
+   <input type="submit" name="Yes"/>
+   <a href="{% url 'learning_logs:topic' topic.id %}">Cancel</a>  
+ </form>
+
+{% endblock content %}
